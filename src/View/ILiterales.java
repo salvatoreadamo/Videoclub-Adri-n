@@ -12,8 +12,8 @@ package View;
 public interface ILiterales {
     
     /**
-     * Literales para el menú principal
-     */
+    * Literales para el menú principal
+    */
     public static final String mnuPrincipalOpcion1 = "1.- Clientes";
     public static final String mnuPrincipalOpcion2 = "2.- Películas";
     public static final String mnuPrincipalOpcion3 = "3.- Alquiler";
@@ -21,15 +21,20 @@ public interface ILiterales {
     public static final String mnuPrincipalOpcion5 = "5.- Morosos";
     public static final String mnuPrincipalOpcion6 = "6.- Salir de la aplicación";
     
-     /**
-     * Literales para el menú clientes
-     */
+    /**
+    * Literales para el menú clientes
+    */
     public static final String mnuClienteOpcion1 = "1.- Nuevo Cliente";
     public static final String mnuClienteOpcion2 = "2.- Eliminar Cliente";
     public static final String mnuClienteOpcion3 = "3.- Editar Cliente";
     public static final String mnuClienteOpcion4 = "4.- Buscar Cliente";
     public static final String mnuClienteOpcion5 = "5.- Mostrar clientes";
-    public static final String mnuClienteOpcion6 = "6.- Volver al menú anterior";
+    
+    
+    /**
+    * Lierales de opciones que se repiten en las vistas
+    */
+    public static final String mnuVolverMenuAnterior = "9.- Volver al menú anterior";
     
     
     /**

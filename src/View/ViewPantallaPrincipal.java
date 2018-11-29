@@ -38,20 +38,19 @@ public final class ViewPantallaPrincipal implements ILiterales {
         if (mnuOpcion == 1) {
             ViewPantallaCliente.MnuCliente();
         } else if (mnuOpcion == 2) {
-            
+            // to do 
         } else if (mnuOpcion == 3) {
-            
+            // to do 
         } else if (mnuOpcion == 4) {
-            
+            // to do 
         } else if (mnuOpcion == 5) {
-            
+            // to do 
         } else if (mnuOpcion == 6) {
-            
+            // to do 
         } else {
             System.out.println("La opción ingresada no es correcta .... El programa se autodetruye.");
             //wait
-          
-            
+            MnuPrincipal();            
         }
 
     }

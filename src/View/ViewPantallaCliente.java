@@ -6,12 +6,13 @@
 package View;
 
 import java.util.Scanner;
+import Controller.ControllerClientes;   // Controlador - La vista lo único que ve es el controlador
 
 /**
  *
  * @author matias
  */
-public class ViewPantallaCliente implements ILiterales {
+public final class  ViewPantallaCliente implements ILiterales {
     
     public static void MnuCliente(){
         
@@ -22,7 +23,7 @@ public class ViewPantallaCliente implements ILiterales {
         System.out.println(mnuClienteOpcion3);
         System.out.println(mnuClienteOpcion4);
         System.out.println(mnuClienteOpcion5);
-        System.out.println(mnuClienteOpcion6);
+        System.out.println(mnuVolverMenuAnterior);
         System.out.println("");
         System.out.println(elegirOpcion);
        
@@ -45,20 +46,21 @@ public class ViewPantallaCliente implements ILiterales {
             
         } else if (mnuOpcion == 5) {
             
-        } else if (mnuOpcion == 6) {
+        } else if (mnuOpcion == 9) {
             ViewPantallaPrincipal.MnuPrincipal();    
         } else {
             System.out.println("La opción ingresada no es correcta .... El programa se autodetruye.");           
+            MnuCliente();
         }
     }    
     
     private static void ViewNuevoCliente() {
         
-        // Declaraciíon de variables
-        
+        // Declaraciíon de variables 
         int DNI = 0;
         String apellido = "";
         String nombre = "";
+        
         Scanner sc1 = new Scanner(System.in);
          
         
@@ -75,14 +77,19 @@ public class ViewPantallaCliente implements ILiterales {
         char aux = sc1.next().toUpperCase().charAt(0);
         
         if ('S' == aux ){
-            System.out.println("Datos almacenados");
+            //System.out.println("Datos almacenados");
+            ControllerClientes control = new ControllerClientes();
+            
+            // Si negamos la consulta lo que sucede es que cuando vuelva con error se pida ingresar de nuevo todos los datos
+            if (!control.SaveClientes(DNI, apellido, nombre)){
+                ViewNuevoCliente();
+            };
+            MnuCliente();            
+            
         } else {
             System.out.println("No se grabarán los datos");
         }
-        
-        
-        
-        
-        
+ 
     }
+}
 
