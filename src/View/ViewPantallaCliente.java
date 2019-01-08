@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package View;
 
 import java.util.Scanner;
@@ -59,6 +55,9 @@ public final class  ViewPantallaCliente implements ILiterales {
         // Declaraciíon de variables 
         int DNI = 0;
         String apellido = "";
+        
+        
+  
         String nombre = "";
         
         Scanner sc1 = new Scanner(System.in);
@@ -69,6 +68,8 @@ public final class  ViewPantallaCliente implements ILiterales {
         
         System.out.println("Apellido: ");
         apellido = sc1.next();
+                
+        
         
         System.out.println("Nombre: ");
         nombre = sc1.next(); 
@@ -91,5 +92,18 @@ public final class  ViewPantallaCliente implements ILiterales {
         }
  
     }
+      static void EliminarCliente() {
+          System.out.println("ingrese el número del ususario a eliminar");
+           int  DNI =0;
+          Scanner sc1 = new Scanner(System.in);
+          DNI= sc1.nextInt();
+          
+         
+          
+          
+      }
+    
+    
+    
 }
 
