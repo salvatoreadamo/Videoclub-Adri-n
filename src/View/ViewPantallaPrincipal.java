@@ -38,7 +38,7 @@ public final class ViewPantallaPrincipal implements ILiterales {
         if (mnuOpcion == 1) {
             ViewPantallaCliente.MnuCliente();
         } else if (mnuOpcion == 2) {
-            ViewPantallaCliente.EliminarCliente();
+           
         } else if (mnuOpcion == 3) {
             // to do 
         } else if (mnuOpcion == 4) {

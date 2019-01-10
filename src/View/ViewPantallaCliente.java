@@ -1,4 +1,3 @@
-
 package View;
 
 import java.util.Scanner;
@@ -8,12 +7,12 @@ import Controller.ControllerClientes;   // Controlador - La vista lo único que 
  *
  * @author matias
  */
-public final class  ViewPantallaCliente implements ILiterales {
-    
-    public static void MnuCliente(){
-        
-        int mnuOpcion = 0 ;
-        
+public final class ViewPantallaCliente implements ILiterales {
+
+    public static void MnuCliente() {
+
+        int mnuOpcion = 0;
+
         System.out.println(mnuClienteOpcion1);
         System.out.println(mnuClienteOpcion2);
         System.out.println(mnuClienteOpcion3);
@@ -22,12 +21,12 @@ public final class  ViewPantallaCliente implements ILiterales {
         System.out.println(mnuVolverMenuAnterior);
         System.out.println("");
         System.out.println(elegirOpcion);
-       
+
         Scanner sc1 = new Scanner(System.in);
         mnuOpcion = sc1.nextInt();
-        
+
         seleccionMenuCliente(mnuOpcion);
-                       
+
     }
 
     private static void seleccionMenuCliente(int mnuOpcion) {
@@ -35,75 +34,89 @@ public final class  ViewPantallaCliente implements ILiterales {
         if (mnuOpcion == 1) {
             ViewNuevoCliente();
         } else if (mnuOpcion == 2) {
-            
+            ViewPantallaCliente.MnuEliminarCliente();
+
         } else if (mnuOpcion == 3) {
-            
+
         } else if (mnuOpcion == 4) {
-            
+
         } else if (mnuOpcion == 5) {
-            
+
         } else if (mnuOpcion == 9) {
-            ViewPantallaPrincipal.MnuPrincipal();    
+            ViewPantallaPrincipal.MnuPrincipal();
         } else {
-            System.out.println("La opción ingresada no es correcta .... El programa se autodetruye.");           
+            System.out.println("La opción ingresada no es correcta .... El programa se autodetruye.");
             MnuCliente();
         }
-    }    
-    
+    }
+
     private static void ViewNuevoCliente() {
-        
+
         // Declaraciíon de variables 
         int DNI = 0;
         String apellido = "";
-        
-        
-  
         String nombre = "";
         
         Scanner sc1 = new Scanner(System.in);
-         
-        
+
         System.out.println("DNI: ");
         DNI = sc1.nextInt();
-        
+
         System.out.println("Apellido: ");
         apellido = sc1.next();
-                
-        
-        
+
         System.out.println("Nombre: ");
-        nombre = sc1.next(); 
-        
+        nombre = sc1.next();
+
         System.out.println(confirmacion);
         char aux = sc1.next().toUpperCase().charAt(0);
-        
-        if ('S' == aux ){
+
+        if ('S' == aux) {
             //System.out.println("Datos almacenados");
             ControllerClientes control = new ControllerClientes();
-            
+
             // Si negamos la consulta lo que sucede es que cuando vuelva con error se pida ingresar de nuevo todos los datos
-            if (!control.SaveClientes(DNI, apellido, nombre)){
+            if (!control.SaveClientes(DNI, apellido, nombre)) {
                 ViewNuevoCliente();
             };
-            MnuCliente();            
-            
+            MnuCliente();
+
         } else {
             System.out.println("No se grabarán los datos");
         }
- 
+
     }
-      static void EliminarCliente() {
-          System.out.println("ingrese el número del ususario a eliminar");
-           int  DNI =0;
-          Scanner sc1 = new Scanner(System.in);
-          DNI= sc1.nextInt();
-          
-         
-          
-          
-      }
-    
-    
-    
+
+    private static void MnuEliminarCliente() {
+        System.out.println("Eliminar Cliente");
+        System.out.println("1- Buscar por DNI cliente a Eliminar");
+        System.out.println("2- Buscar por ´Apellido el cliente a eliminar");      
+        System.out.println("");
+        System.out.println(elegirOpcion);
+
+        Scanner sc1 = new Scanner(System.in);
+        int mnuOpcion = sc1.nextInt();
+
+        seleccionMnuEliminarCliente(mnuOpcion);
+
+        
+    }
+
+    private static void seleccionMnuEliminarCliente(int MnuOpcion) {
+        if (MnuOpcion == 1) {
+            System.out.println("DNI");
+        } else if (MnuOpcion == 2) {
+            System.out.println("Apellido");
+        }
+    }
+
 }
+            
+         
+       
+           
+       
+         
+  
+          
 
