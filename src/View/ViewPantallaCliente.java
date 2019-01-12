@@ -90,7 +90,7 @@ public final class ViewPantallaCliente implements ILiterales {
     private static void MnuEliminarCliente() {
         System.out.println("Eliminar Cliente");
         System.out.println("1- Buscar por DNI cliente a Eliminar");
-        System.out.println("2- Buscar por ´Apellido el cliente a eliminar");      
+        System.out.println("2- Buscar por Apellido el cliente a eliminar");      
         System.out.println("");
         System.out.println(elegirOpcion);
 
@@ -98,6 +98,7 @@ public final class ViewPantallaCliente implements ILiterales {
         int mnuOpcion = sc1.nextInt();
 
         seleccionMnuEliminarCliente(mnuOpcion);
+       
 
         
     }
