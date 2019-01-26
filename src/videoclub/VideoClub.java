@@ -10,7 +10,10 @@ package videoclub;
  * @author matias
  */
 import View.ViewPantallaPrincipal;
+import javax.swing.JFrame;
 import videoclub.VideoClub;
+import View.NewJFrame;
+
 
 
 
@@ -22,8 +25,11 @@ public class VideoClub {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        ViewPantallaPrincipal.MnuPrincipal();
-        
+    //    ViewPantallaPrincipal.MnuPrincipal();
+        JFrame Vis = new NewJFrame();
+        Vis.setVisible(true);
     }
+    
+
     
 }
